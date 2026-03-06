@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ammaar Iftikhar</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --bg2: #f4f3ef;
+    --text: #1a1a18;
+    --text-mid: #6b6b65;
+    --text-light: #a8a8a0;
+    --accent: #2d5a27;
+    --accent-light: #e8f0e6;
+    --border: #e5e4df;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  nav ul { display: flex; gap: 2rem; list-style: none; }
+
+  nav a {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--accent); }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+
+  #hero {
+    padding: 9rem 0 5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: end;
+  }
+
+  .hero-location {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .hero-bio {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .tag.muted { background: var(--bg2); color: var(--text-mid); }
+
+  .hero-side { text-align: right; }
+
+  .hero-stat { margin-bottom: 1.5rem; }
+
+  .hero-stat-num {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    color: var(--text);
+    display: block;
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-text strong { color: var(--text); font-weight: 500; }
+
+  .about-aside h3 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    margin-top: 1.8rem;
+  }
+
+  .about-aside h3:first-child { margin-top: 0; }
+
+  .about-aside ul { list-style: none; }
+
+  .about-aside li {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-aside li span { font-size: 0.75rem; color: var(--text-light); }
+
+  .cv-section {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .cv-info h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .cv-info p { font-size: 0.82rem; color: var(--text-light); }
+
+  .btn-download {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--bg);
+    background: var(--text);
+    padding: 0.75rem 1.8rem;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    transition: background 0.2s;
+    font-family: var(--sans);
+    display: inline-block;
+  }
+
+  .btn-download:hover { background: var(--accent); }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  .exp-date { font-size: 0.8rem; color: var(--text-light); padding-top: 0.2rem; }
+
+  .exp-role {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+  }
+
+  .exp-company {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .exp-bullets { list-style: none; }
+
+  .exp-bullets li {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    padding: 0.25rem 0 0.25rem 1rem;
+    position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--text-light);
+  }
+
+  .blog-item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 2rem;
+    padding: 1.8rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blog-item:first-child { border-top: 1px solid var(--border); }
+  .blog-item:hover .blog-title { color: var(--accent); }
+
+  .blog-date { font-size: 0.78rem; color: var(--text-light); padding-top: 0.15rem; }
+
+  .blog-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+    transition: color 0.2s;
+    line-height: 1.3;
+  }
+
+  .blog-excerpt { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
+
+  .blog-arrow {
+    font-size: 1rem;
+    color: var(--text-light);
+    padding-top: 0.1rem;
+    transition: transform 0.2s, color 0.2s;
+  }
+
+  .blog-item:hover .blog-arrow { transform: translateX(4px); color: var(--accent); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-text p {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .contact-link:first-child { border-top: 1px solid var(--border); }
+  .contact-link:hover { color: var(--accent); }
+
+  .contact-link-label {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2rem;
+  }
+
+  footer { padding: 2.5rem 0; }
+
+  .footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p { font-size: 0.78rem; color: var(--text-light); }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade { animation: fadeIn 0.7s ease forwards; }
+  .d1 { animation-delay: 0.05s; opacity: 0; }
+  .d2 { animation-delay: 0.15s; opacity: 0; }
+  .d3 { animation-delay: 0.28s; opacity: 0; }
+
+  @media (max-width: 700px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-side { display: flex; gap: 2rem; text-align: left; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    .blog-item { grid-template-columns: 1fr; }
+    .blog-date, .blog-arrow { display: none; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .cv-section { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Ammaar Iftikhar</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#blog">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-location fade d1">Hobart, Tasmania · Australia</p>
+      <h1 class="fade d1">Ammaar<br><em>Iftikhar</em></h1>
+      <p class="hero-bio fade d2">
+        Master's student in Computer Science at the University of Sydney. 
+      </p>
+      <div class="hero-tags fade d3">
+        <span class="tag">CC Certified</span>
+        <span class="tag">Security+ Scheduled</span>
+        <span class="tag muted">ACM · IEEE · ISC2</span>
+      </div>
+    </div>
+    <div class="hero-side fade d2">
+      <div class="hero-stat">
+        <span class="hero-stat-num">9</span>
+        <span class="hero-stat-label">Course Distinctions MSCS</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3.60</span>
+        <span class="hero-stat-label">Undergrad GPA</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I completed my <strong>Master's in Computer Science</strong> at the University of Sydney (9 Course Distinctions) and my undergraduate studies in Computer Engineering at <strong>Bilkent University</strong>, graduating Magna Cum Laude.</p>
+        <p>My hands-on experience spans CTF challenges, reverse engineering with Ghidra and Frida, MITM attacks, and vulnerability assessment using Metasploit. I have also worked extensively in machine learning — building CNNs, RNNs, and information-theoretic models across applied problems.</p>
+        <p>I have interned across three companies in SRE, SaaS, and mobile engineering, and I am a member of <strong>ACM, IEEE,</strong> and <strong>ISC2</strong>.</p>
+      </div>
+      <div class="about-aside">
+        <h3>Education</h3>
+        <ul>
+          <li>MSc Computer Science <span>USYD 2024–26</span></li>
+          <li>BSc Computer Engineering <span>Bilkent 2019–23</span></li>
+        </ul>
+        <h3>Certifications</h3>
+        <ul>
+          <li>CC — Certified in Cybersecurity <span>ISC2</span></li>
+          <li>CompTIA Security+ <span>Scheduled</span></li>
+        </ul>
+        <h3>Interests</h3>
+        <ul>
+          <li>Cybersecurity</li>
+          <li>Distributed Systems</li>
+          <li>Algorithms</li>
+          <li>Machine Learning</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-info">
+        <h3>Curriculum Vitae</h3>
+        <p>Full resume with projects, experience, and academic record — updated 2025.</p>
+      </div>
+      <a href="Ammaar_Iftikhar.pdf" download class="btn-download">Download CV →</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Experience</div>
+
+    <div class="exp-item">
+      <div class="exp-date">June – Aug 2022</div>
+      <div>
+        <div class="exp-role">Software Engineering Intern — SRE</div>
+        <div class="exp-company">Bayzat</div>
+        <ul class="exp-bullets">
+          <li>Built a software management solution in GoLang to streamline infrastructure and deployment changes.</li>
+          <li>Engineered a Text User Interface using the Bubble Tea and Glow libraries.</li>
+          <li>Developed a JSON data integration pipeline for processing infrastructure changes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Sept – Dec 2021</div>
+      <div>
+        <div class="exp-role">Software Engineering Intern</div>
+        <div class="exp-company">Radity</div>
+        <ul class="exp-bullets">
+          <li>Architected packages for a SaaS application using Django and SMTP libraries.</li>
+          <li>Proactively identified security vulnerabilities via exhaustive investigation using Metasploit.</li>
+          <li>Transformed the solution into a reusable boilerplate adopted across the organisation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">June – Aug 2021</div>
+      <div>
+        <div class="exp-role">Software Engineering Intern</div>
+        <div class="exp-company">FDNSOFT</div>
+        <ul class="exp-bullets">
+          <li>Introduced an advanced search feature and UI redesigns to a company application.</li>
+          <li>Built frontend with Flutter and backend with Node.js.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="container">
+    <div class="section-label">Writing</div>
+    <h2>Thoughts & Notes</h2>
+
+    <div>
+      <a href="#" class="blog-item">
+        <div class="blog-date">Coming soon</div>
+        <div>
+          <div class="blog-title">From NLP to Cybersecurity — Why I Switched</div>
+          <div class="blog-excerpt">The unexpected overlap between information theory and network security.</div>
+        </div>
+        <div class="blog-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <div class="contact-grid">
+      <div class="contact-text">
+        <h2>Let's talk.</h2>
+        <p>I am currently open to cybersecurity and software engineering opportunities. Whether it is a role, a collaboration, or just a conversation — feel free to reach out.</p>
+        <p style="font-size:0.85rem; color:var(--text-light);">Based in Hobart, Tasmania. Open to remote and relocation.</p>
+      </div>
+      <div>
+        <a href="mailto:hakim.ammaar@gmail.com" class="contact-link">
+          <div><div class="contact-link-label">Email</div>hakim.ammaar@gmail.com</div>→
+        </a>
+        <a href="https://www.linkedin.com/in/ammaar-iftikhar-2866311b3" target="_blank" class="contact-link">
+          <div><div class="contact-link-label">LinkedIn</div>ammaar-iftikhar</div>→
+        </a>
+        <a href="https://github.com/AmmaarIftikhar" target="_blank" class="contact-link">
+          <div><div class="contact-link-label">GitHub</div>AmmaarIftikhar</div>→
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 Ammaar Iftikhar</p>
+    <p>Hobart, Tasmania · Australia</p>
+  </div>
+</footer>
+
+</body>
+</html>
