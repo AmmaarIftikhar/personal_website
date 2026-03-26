@@ -4,429 +4,120 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ammaar Iftikhar | Cybersecurity & CS Graduate</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Ammaar Iftikhar — Master's student in Computer Science at the University of Sydney. Cybersecurity, Distributed Systems, and Machine Learning.">
+  <meta name="description" content="Ammaar Iftikhar — Master's graduate in Computer Science at the University of Sydney. Cybersecurity, Distributed Systems, and Machine Learning.">
   <meta name="keywords" content="Ammaar Iftikhar, Cybersecurity, Computer Science, USYD, Bilkent, Software Engineer, CTF, Machine Learning">
   <meta name="author" content="Ammaar Iftikhar">
-
-  <!-- Open Graph (how it appears when shared on LinkedIn, Twitter etc) -->
   <meta property="og:title" content="Ammaar Iftikhar | Cybersecurity & CS Graduate">
-  <meta property="og:description" content="Master's student at USYD. Hands-on experience in CTF challenges, MITM attacks, and vulnerability assessment.">
+  <meta property="og:description" content="MSCS graduate at USYD. Hands-on experience in CTF challenges, MITM attacks, and vulnerability assessment.">
   <meta property="og:url" content="https://ammaariftikhar.com">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://ammaariftikhar.com/ammaar.jpg">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ammaar Iftikhar | Cybersecurity & CS Graduate">
-  <meta name="twitter:description" content="Master's student at USYD. Cybersecurity, Distributed Systems, Machine Learning.">
+  <meta name="twitter:description" content="MSCS graduate at USYD. Cybersecurity, Distributed Systems, Machine Learning.">
   <meta name="twitter:image" content="https://ammaariftikhar.com/ammaar.jpg">
-  
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #fafaf8;
-    --bg2: #f4f3ef;
-    --text: #1a1a18;
-    --text-mid: #6b6b65;
-    --text-light: #a8a8a0;
-    --accent: #2d5a27;
-    --accent-light: #e8f0e6;
-    --border: #e5e4df;
+    --bg: #1a3a5c;
+    --bg2: #16304f;
+    --text: #e8f0f8;
+    --text-mid: #a8c0d8;
+    --text-light: #6a90b0;
+    --accent: #5ba4cf;
+    --accent-light: #1e4570;
+    --border: #2a4a6e;
     --serif: 'DM Serif Display', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-
-  #hero * {
-    color: #1a1a18;
-  }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(250,250,248,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    font-family: var(--serif);
-    font-size: 1.1rem;
-    color: var(--text);
-    text-decoration: none;
-  }
-
+  #hero * { color: #e8f0f8; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(26,58,92,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: var(--serif); font-size: 1.1rem; color: var(--text); text-decoration: none; }
   nav ul { display: flex; gap: 2rem; list-style: none; }
-
-  nav a {
-    font-size: 0.85rem;
-    color: var(--text-mid);
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.2s;
-  }
-
+  nav a { font-size: 0.85rem; color: var(--text-mid); text-decoration: none; font-weight: 400; transition: color 0.2s; }
   nav a:hover { color: var(--accent); }
-
   .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-
-  #hero {
-    padding: 9rem 0 5rem;
-    min-height: 100vh;
-    border-bottom: 1px solid var(--border);
-    background-image: url('img1.jpg');
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
-  
-  .hero-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 4rem;
-    align-items: end;
-  }
-
-  .hero-location {
-    font-size: 0.78rem;
-    color: var(--text-light);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin-bottom: 1.5rem;
-  }
-
+  #hero { padding: 9rem 0 5rem; min-height: 100vh; border-bottom: 1px solid var(--border); background-image: url('img1.jpg'); background-size: cover; background-position: top center; background-repeat: no-repeat; background-attachment: scroll; }
+  .hero-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: end; }
+  .hero-location { font-size: 0.78rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
+  h1 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1.5rem; }
   h1 em { font-style: italic; color: var(--accent); }
-
-  .hero-bio {
-    font-size: 1rem;
-    color: var(--text-mid);
-    line-height: 1.8;
-    max-width: 520px;
-    margin-bottom: 2rem;
-  }
-
+  .hero-bio { font-size: 1rem; color: var(--text-mid); line-height: 1.8; max-width: 520px; margin-bottom: 2rem; }
   .hero-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-
-  .tag {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.8rem;
-    background: var(--accent-light);
-    color: var(--accent);
-    font-weight: 500;
-  }
-
+  .tag { font-size: 0.75rem; padding: 0.3rem 0.8rem; background: var(--accent-light); color: var(--accent); font-weight: 500; }
   .tag.muted { background: var(--bg2); color: var(--text-mid); }
-
   .hero-side { text-align: right; }
-
   .hero-stat { margin-bottom: 1.5rem; }
-
-  .hero-stat-num {
-    font-family: var(--serif);
-    font-size: 2.5rem;
-    color: var(--text);
-    display: block;
-    line-height: 1;
-  }
-
-  .hero-stat-label {
-    font-size: 0.72rem;
-    color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  section {
-    padding: 5rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .section-label {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--text-light);
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  h2 {
-    font-family: var(--serif);
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin-bottom: 1.5rem;
-  }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 5rem;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-    color: var(--text-mid);
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-  }
-
+  .hero-stat-num { font-family: var(--serif); font-size: 2.5rem; color: var(--text); display: block; line-height: 1; }
+  .hero-stat-label { font-size: 0.72rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; }
+  section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
+  .section-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-light); margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  h2 { font-family: var(--serif); font-size: 2rem; font-weight: 400; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1.5rem; }
+  .about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 5rem; }
+  .about-text p { font-size: 1rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 1.2rem; }
   .about-text strong { color: var(--text); font-weight: 500; }
-
-  .about-aside h3 {
-    font-family: var(--serif);
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 0.8rem;
-    margin-top: 1.8rem;
-  }
-
+  .about-aside h3 { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: var(--text); margin-bottom: 0.8rem; margin-top: 1.8rem; }
   .about-aside h3:first-child { margin-top: 0; }
-
   .about-aside ul { list-style: none; }
-
-  .about-aside li {
-    font-size: 0.85rem;
-    color: var(--text-mid);
-    padding: 0.35rem 0;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  .about-aside li { font-size: 0.85rem; color: var(--text-mid); padding: 0.35rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
   .about-aside li span { font-size: 0.75rem; color: var(--text-light); }
-
-  .cv-section {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    padding: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .cv-info h3 {
-    font-family: var(--serif);
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 0.3rem;
-  }
-
+  .cv-section { background: var(--bg2); border: 1px solid var(--border); padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 3rem; }
+  .cv-info h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--text); margin-bottom: 0.3rem; }
   .cv-info p { font-size: 0.82rem; color: var(--text-light); }
+  .btn-download { font-size: 0.82rem; font-weight: 500; color: var(--bg); background: var(--text); padding: 0.75rem 1.5rem; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
+  .btn-download:hover { opacity: 0.85; }
+  .exp-item { display: grid; grid-template-columns: 140px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--border); }
+  .exp-item:first-of-type { border-top: 1px solid var(--border); }
+  .exp-date { font-size: 0.78rem; color: var(--text-light); padding-top: 0.2rem; }
+  .exp-role { font-size: 0.95rem; font-weight: 500; color: var(--text); margin-bottom: 0.2rem; }
+  .exp-company { font-size: 0.82rem; color: var(--accent); margin-bottom: 0.8rem; }
+  .exp-bullets { list-style: none; padding: 0; }
+  .exp-bullets li { font-size: 0.85rem; color: var(--text-mid); padding: 0.25rem 0; padding-left: 1rem; position: relative; line-height: 1.6; }
+  .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--text-light); }
 
-  .btn-download {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--bg);
-    background: var(--text);
-    padding: 0.75rem 1.8rem;
-    text-decoration: none;
-    white-space: nowrap;
-    letter-spacing: 0.02em;
-    transition: background 0.2s;
-    font-family: var(--sans);
-    display: inline-block;
-  }
+  /* Projects grid */
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+  .project-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.8rem; transition: border-color 0.2s; }
+  .project-card:hover { border-color: var(--accent); }
+  .project-tag { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.8rem; }
+  .project-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--text); margin-bottom: 0.6rem; line-height: 1.3; }
+  .project-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; margin-bottom: 1rem; }
+  .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .stack-pill { font-size: 0.68rem; padding: 0.2rem 0.6rem; background: var(--accent-light); color: var(--accent); font-weight: 500; }
 
-  .btn-download:hover { background: var(--accent); }
-
-  .exp-item {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 3rem;
-    padding: 2.5rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .exp-item:last-child { border-bottom: none; }
-
-  .exp-date { font-size: 0.8rem; color: var(--text-light); padding-top: 0.2rem; }
-
-  .exp-role {
-    font-family: var(--serif);
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 0.2rem;
-  }
-
-  .exp-company {
-    font-size: 0.85rem;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
-
-  .exp-bullets { list-style: none; }
-
-  .exp-bullets li {
-    font-size: 0.9rem;
-    color: var(--text-mid);
-    line-height: 1.7;
-    padding: 0.25rem 0 0.25rem 1rem;
-    position: relative;
-  }
-
-  .exp-bullets li::before {
-    content: '–';
-    position: absolute;
-    left: 0;
-    color: var(--text-light);
-  }
-
-  .blog-item {
-    display: grid;
-    grid-template-columns: 120px 1fr auto;
-    gap: 2rem;
-    padding: 1.8rem 0;
-    border-bottom: 1px solid var(--border);
-    align-items: start;
-    text-decoration: none;
-    color: inherit;
-  }
-
+  .blog-item { display: grid; grid-template-columns: 100px 1fr 1.5rem; padding: 1.8rem 0; border-bottom: 1px solid var(--border); align-items: start; text-decoration: none; color: inherit; }
   .blog-item:first-child { border-top: 1px solid var(--border); }
   .blog-item:hover .blog-title { color: var(--accent); }
-
   .blog-date { font-size: 0.78rem; color: var(--text-light); padding-top: 0.15rem; }
-
-  .blog-title {
-    font-family: var(--serif);
-    font-size: 1.05rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 0.3rem;
-    transition: color 0.2s;
-    line-height: 1.3;
-  }
-
+  .blog-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--text); margin-bottom: 0.3rem; transition: color 0.2s; line-height: 1.3; }
   .blog-excerpt { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
-
-  .blog-arrow {
-    font-size: 1rem;
-    color: var(--text-light);
-    padding-top: 0.1rem;
-    transition: transform 0.2s, color 0.2s;
-  }
-
+  .blog-arrow { font-size: 1rem; color: var(--text-light); padding-top: 0.1rem; transition: transform 0.2s, color 0.2s; }
   .blog-item:hover .blog-arrow { transform: translateX(4px); color: var(--accent); }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .contact-text p {
-    font-size: 1rem;
-    color: var(--text-mid);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-    text-decoration: none;
-    color: var(--text);
-    font-size: 0.9rem;
-    transition: color 0.2s;
-  }
-
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .contact-text p { font-size: 1rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 1.5rem; }
+  .contact-link { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); font-size: 0.9rem; transition: color 0.2s; }
   .contact-link:first-child { border-top: 1px solid var(--border); }
   .contact-link:hover { color: var(--accent); }
-
-  .contact-link-label {
-    font-size: 0.72rem;
-    color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.2rem;
-  }
-
+  .contact-link-label { font-size: 0.72rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem; }
   footer { padding: 2.5rem 0; }
-
-  .footer-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  .footer-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
   footer p { font-size: 0.78rem; color: var(--text-light); }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
   .fade { animation: fadeIn 0.7s ease forwards; }
   .d1 { animation-delay: 0.05s; opacity: 0; }
   .d2 { animation-delay: 0.15s; opacity: 0; }
   .d3 { animation-delay: 0.28s; opacity: 0; }
-
   @media (max-width: 700px) {
     .hero-inner { grid-template-columns: 1fr; }
     .hero-side { display: flex; gap: 2rem; text-align: left; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    .projects-grid { grid-template-columns: 1fr; }
     .blog-item { grid-template-columns: 1fr; }
     .blog-date, .blog-arrow { display: none; }
     .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -442,6 +133,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#blog">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -452,10 +144,8 @@
   <div class="hero-inner">
     <div>
       <p class="hero-location fade d1">Hobart, Tasmania · Australia</p>
-      <h1 class="fade d1">Ammaar<br><em>Iftikhar</em></h1>
-      <p class="hero-bio fade d2">
-        Master's student in Computer Science at the University of Sydney. 
-      </p>
+      <h1 class="fade d1">Ammaar<br>Iftikhar</h1>
+      <p class="hero-bio fade d2">Master of Computer Science graduate from the University of Sydney. Cybersecurity, Machine Learning, and Distributed Systems.</p>
       <div class="hero-tags fade d3">
         <span class="tag">CC Certified</span>
         <span class="tag">Security+ Scheduled</span>
@@ -480,9 +170,9 @@
     <div class="section-label">About</div>
     <div class="about-grid">
       <div class="about-text">
-        <p>I completed my <strong>Master's in Computer Science</strong> at the University of Sydney (9 Course Distinctions) and my undergraduate studies in Computer Engineering at <strong>Bilkent University</strong>, graduating Magna Cum Laude.</p>
-        <p>My hands-on experience spans CTF challenges, reverse engineering with Ghidra and Frida, MITM attacks, and vulnerability assessment using Metasploit. I have also worked extensively in machine learning — building CNNs, RNNs, and information-theoretic models across applied problems.</p>
-        <p>I have interned across three companies in SRE, SaaS, and mobile engineering, and I am a member of <strong>ACM, IEEE,</strong> and <strong>ISC2</strong>.</p>
+        <p>I completed my <strong>Master of Science in Computer Science</strong> at the University of Sydney (9 Course Distinctions) and my undergraduate studies in Computer Engineering at <strong>Bilkent University</strong>, graduating Magna Cum Laude in the top 10 percentile.</p>
+        <p>My hands-on experience spans CTF challenges, reverse engineering with Ghidra and Frida, MITM attacks, and vulnerability assessment using Metasploit and ZAPROXY. I have also worked extensively in machine learning, building CNNs, RNNs, and information-theoretic models across applied problems.</p>
+        <p>I have worked across five organisations in software engineering, backend development, and technology consulting. I am currently based in Hobart and am open to cybersecurity, software engineering, and data roles locally and remotely.</p>
       </div>
       <div class="about-aside">
         <h3>Education</h3>
@@ -504,11 +194,10 @@
         </ul>
       </div>
     </div>
-
     <div class="cv-section">
       <div class="cv-info">
         <h3>Curriculum Vitae</h3>
-        <p>Full resume with projects, experience, and academic record — updated 2025.</p>
+        <p>Full resume with projects, experience, and academic record — updated 2026.</p>
       </div>
       <a href="Ammaar_Iftikhar.pdf" download class="btn-download">Download CV →</a>
     </div>
@@ -520,12 +209,39 @@
     <div class="section-label">Experience</div>
 
     <div class="exp-item">
-      <div class="exp-date">June – Aug 2022</div>
+      <div class="exp-date">Aug – Dec 2025</div>
+      <div>
+        <div class="exp-role">Backend Developer (Graduate Project)</div>
+        <div class="exp-company">RenoPilot Pty Ltd, Australia</div>
+        <ul class="exp-bullets">
+          <li>Built and integrated REST APIs to connect the backend and frontend of a renovation platform.</li>
+          <li>Wrote unit and integration tests to validate end-to-end functionality.</li>
+          <li>Developed backend features using Express.js and Node.js.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Jul 2023 – Mar 2024</div>
+      <div>
+        <div class="exp-role">Technology Consultant</div>
+        <div class="exp-company">Encon Asia (Startup) — J&amp;K, India</div>
+        <ul class="exp-bullets">
+          <li>Architected and developed the startup's web platform, ensuring a secure and responsive digital presence from the ground up.</li>
+          <li>Consulted on digital infrastructure, recommending modern GIS tools and spatial data approaches to optimise core operations.</li>
+          <li>Evaluated and selected the tech stack, balancing long-term scalability with immediate budget and performance requirements.</li>
+          <li>Advised on integrating technology into urban planning workflows to support sustainable smart city design.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Jun – Aug 2022</div>
       <div>
         <div class="exp-role">Software Engineering Intern — SRE</div>
-        <div class="exp-company">Bayzat</div>
+        <div class="exp-company">Bayzat, Ankara, Turkiye</div>
         <ul class="exp-bullets">
-          <li>Built a software management solution in GoLang to streamline infrastructure and deployment changes.</li>
+          <li>Built a software management tool in GoLang to streamline infrastructure and deployment changes.</li>
           <li>Engineered a Text User Interface using the Bubble Tea and Glow libraries.</li>
           <li>Developed a JSON data integration pipeline for processing infrastructure changes.</li>
         </ul>
@@ -533,28 +249,147 @@
     </div>
 
     <div class="exp-item">
-      <div class="exp-date">Sept – Dec 2021</div>
+      <div class="exp-date">Sep – Dec 2021</div>
       <div>
         <div class="exp-role">Software Engineering Intern</div>
-        <div class="exp-company">Radity</div>
+        <div class="exp-company">Radity, Zurich, Switzerland (Remote)</div>
         <ul class="exp-bullets">
-          <li>Architected packages for a SaaS application using Django and SMTP libraries.</li>
-          <li>Proactively identified security vulnerabilities via exhaustive investigation using Metasploit.</li>
-          <li>Transformed the solution into a reusable boilerplate adopted across the organisation.</li>
+          <li>Built and maintained packages for a SaaS application using Django and SMTP libraries.</li>
+          <li>Identified and addressed security vulnerabilities on a company website through a targeted Metasploit investigation.</li>
+          <li>Refactored the solution into a reusable boilerplate adopted across the organisation.</li>
         </ul>
       </div>
     </div>
 
     <div class="exp-item">
-      <div class="exp-date">June – Aug 2021</div>
+      <div class="exp-date">Jun – Sep 2021</div>
       <div>
         <div class="exp-role">Software Engineering Intern</div>
-        <div class="exp-company">FDNSOFT</div>
+        <div class="exp-company">FDNSOFT, Ankara, Turkiye (On-site)</div>
         <ul class="exp-bullets">
-          <li>Introduced an advanced search feature and UI redesigns to a company application.</li>
-          <li>Built frontend with Flutter and backend with Node.js.</li>
+          <li>Added an advanced search feature and improved UI graphics for a company application.</li>
+          <li>Built the frontend using Flutter and the backend using Node.js.</li>
         </ul>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Projects</div>
+    <h2>Selected Work</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-tag">Cybersecurity · AI</div>
+        <div class="project-title">LLM-Powered Alert Triage — Microsoft Sentinel</div>
+        <div class="project-desc">Building an automated security alert triage system that uses Claude (Anthropic) to summarise and prioritise Sentinel incidents in plain English, reducing analyst noise and investigation time.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Azure Sentinel</span>
+          <span class="stack-pill">Logic Apps</span>
+          <span class="stack-pill">Azure Functions</span>
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">Anthropic API</span>
+          <span class="stack-pill">KQL</span>
+          <span class="stack-pill">Power BI</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Data Engineering</div>
+        <div class="project-title">Analytics Pipeline — Healthcare Data (MIMIC)</div>
+        <div class="project-desc">End-to-end data pipeline ingesting real-world healthcare data using Airflow DAGs, dbt transformations with automated integrity tests, and interactive dashboards in Apache Superset.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Apache Airflow</span>
+          <span class="stack-pill">dbt</span>
+          <span class="stack-pill">Docker</span>
+          <span class="stack-pill">Postgres</span>
+          <span class="stack-pill">Apache Superset</span>
+          <span class="stack-pill">Python</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Cybersecurity · Penetration Testing</div>
+        <div class="project-title">Vulnerability Assessment</div>
+        <div class="project-desc">Discovered 16 vulnerabilities across network, OS, web server, and database layers. Gained root access via insecure boot, exploited Werkzeug debug console, FTP anonymous access, and SQL injection. Documented findings and remediations. Received 100% score.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Metasploit</span>
+          <span class="stack-pill">ZAPROXY</span>
+          <span class="stack-pill">nmap</span>
+          <span class="stack-pill">sqlmap</span>
+          <span class="stack-pill">Wireshark</span>
+          <span class="stack-pill">John the Ripper</span>
+          <span class="stack-pill">Kali Linux</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Machine Learning</div>
+        <div class="project-title">Lung Disease Classifier</div>
+        <div class="project-desc">Engineered SVMs, Neural Networks, and Vision Transformers (ViTs) to classify lung X-rays into five categories. Achieved 92% accuracy on the test dataset. Earned 100/100 on the final report.</div>
+        <div class="project-stack">
+          <span class="stack-pill">PyTorch</span>
+          <span class="stack-pill">SVMs</span>
+          <span class="stack-pill">ViT</span>
+          <span class="stack-pill">NumPy</span>
+          <span class="stack-pill">ConvexOpt</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Large Scale Networks · Data Analysis</div>
+        <div class="project-title">Stock Market Network Analysis</div>
+        <div class="project-desc">Processed time-series data for 4,440 stocks over 5 months. Built similarity graphs using PMI and MAD metrics. Analysed clustering, sparsity, and centrality to study sector behaviour and market sentiment.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">NetworkX</span>
+          <span class="stack-pill">PyTorch</span>
+          <span class="stack-pill">Pandas</span>
+          <span class="stack-pill">yFinance</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Cybersecurity · Incident Response</div>
+        <div class="project-title">DNC Hack Incident Review</div>
+        <div class="project-desc">Investigated the 2016 Democratic National Convention cyberattack, identifying attack vectors including spear-phishing and credential theft. Authored a structured incident review report with timeline, impact analysis, and recommended mitigations.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Threat Analysis</span>
+          <span class="stack-pill">Incident Response</span>
+          <span class="stack-pill">Technical Writing</span>
+          <span class="stack-pill">OSINT</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Machine Learning · Information Theory</div>
+        <div class="project-title">Breast Cancer Feature Selection</div>
+        <div class="project-desc">Compared feature selection mechanisms using Mutual Information and Conditional Mutual Information. Built a PyTorch autoencoder for dimensionality reduction alongside PCA. Received a distinction.</div>
+        <div class="project-stack">
+          <span class="stack-pill">PyTorch</span>
+          <span class="stack-pill">Keras</span>
+          <span class="stack-pill">Pandas</span>
+          <span class="stack-pill">JIDT</span>
+          <span class="stack-pill">Python</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">CTF · Reverse Engineering</div>
+        <div class="project-title">Catch The Flags</div>
+        <div class="project-desc">Completed 7 out of 8 CTF challenges across reverse engineering, cryptography, and network security. Reverse engineered binary executables using Ghidra and apktool. Executed a MITM attack on live network traffic.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Ghidra</span>
+          <span class="stack-pill">Frida</span>
+          <span class="stack-pill">apktool</span>
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">MITM</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -562,8 +397,7 @@
 <section id="blog">
   <div class="container">
     <div class="section-label">Writing</div>
-    <h2>Thoughts & Notes</h2>
-
+    <h2>Thoughts &amp; Notes</h2>
     <div>
       <a href="#" class="blog-item">
         <div class="blog-date">Coming soon</div>
@@ -583,7 +417,7 @@
     <div class="contact-grid">
       <div class="contact-text">
         <h2>Let's talk.</h2>
-        <p>I am currently open to cybersecurity and software engineering opportunities. Whether it is a role, a collaboration, or just a conversation — feel free to reach out.</p>
+        <p>I am open to cybersecurity, software engineering, and data roles. Whether it is a role, a collaboration, or just a conversation, feel free to reach out.</p>
         <p style="font-size:0.85rem; color:var(--text-light);">Based in Hobart, Tasmania. Open to remote and relocation.</p>
       </div>
       <div>
@@ -603,10 +437,11 @@
 
 <footer>
   <div class="footer-inner">
-    <p>© 2025 Ammaar Iftikhar</p>
-    <p>Hobart, Tasmania · Australia</p>
+    <p>Ammaar Iftikhar — Hobart, Tasmania</p>
+    <p>ammaariftikhar.com</p>
   </div>
 </footer>
 
 </body>
 </html>
+B
